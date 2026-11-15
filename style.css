@@ -1,0 +1,227 @@
+/* Paleta inspirada na cartilha "Golpes: Evite Fraudes" (CERT.br) */
+:root {
+  --fundo: #fde3d6;        /* Fundo pêssego claro das páginas da cartilha */
+  --fundo-card: #ffffff;   /* Branco das janelas */
+  --fundo-detalhe: #f4eadc;/* Bege interno dos ícones */
+  --texto: #111111;        /* Preto forte para leitura */
+  --coral: #ee6347;        /* Laranja/coral dos títulos principais */
+  --verde: #3ba363;        /* Verde dos ícones de proteção */
+  --borda: #111111;        /* Contorno preto estilo janela */
+}
+
+/* Tema Escuro adaptado à paleta */
+body.escuro {
+  --fundo: #171413;
+  --fundo-card: #24201e;
+  --fundo-detalhe: #2e2926;
+  --texto: #f5efe6;
+  --coral: #ff785c;
+  --verde: #4cc37a;
+  --borda: #574e4a;
+}
+
+/* Controle de acessibilidade (tamanho da fonte) */
+html.fonte-grande {
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--fundo-card);
+  border-bottom: 2px solid var(--borda);
+  padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--coral);
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--texto);
+  font-weight: 700;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+}
+
+nav a.ativo,
+nav a:hover {
+  background-color: var(--coral);
+  color: #ffffff;
+}
+
+.botoes button {
+  background-color: var(--fundo-detalhe);
+  border: 2px solid var(--borda);
+  color: var(--texto);
+  padding: 0.35rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Conteúdo Principal */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  color: var(--coral);
+  margin-bottom: 0.8rem;
+}
+
+h2, h3 {
+  margin-bottom: 0.8rem;
+}
+
+p, ul {
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+/* Cards no estilo das janelas da cartilha */
+.card {
+  background-color: var(--fundo-card);
+  border: 2px solid var(--borda);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card h2 {
+  color: var(--coral);
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  background-color: var(--coral);
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid var(--borda);
+  padding: 0.55rem 1.1rem;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Caixas de Alerta e Proteção */
+.caixa {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 2px dashed var(--borda);
+}
+
+.atento {
+  background-color: var(--fundo);
+}
+
+.atento h3 {
+  color: var(--coral);
+}
+
+.protecao {
+  background-color: var(--fundo-detalhe);
+}
+
+.protecao h3 {
+  color: var(--verde);
+}
+
+/* Página Sobre o Grupo */
+.membro {
+  text-align: center;
+}
+
+.membro img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--borda);
+  margin-bottom: 0.8rem;
+  background-color: var(--fundo-detalhe);
+}
+
+/* Gerador de Senhas */
+.senha {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--verde);
+  padding: 1rem;
+  background-color: var(--fundo-detalhe);
+  border: 2px dashed var(--borda);
+  border-radius: 8px;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Formulário de Contato */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+input, textarea {
+  padding: 0.7rem;
+  border: 2px solid var(--borda);
+  border-radius: 6px;
+  background-color: var(--fundo-detalhe);
+  color: var(--texto);
+  font-family: inherit;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--fundo-card);
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 2px solid var(--borda);
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
